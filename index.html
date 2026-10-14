@@ -348,10 +348,103 @@ b .sym,.idea .out b .sym,.band .nums b .sym,.chg .imp b .sym{display:inline!impo
   .chips{order:5}.ans{order:6;width:auto;margin:0 12px}
   .demo-cap.on{position:fixed;left:10px;right:10px;bottom:10px;width:auto;z-index:150}
 }
+
+/* ============ the gift: happn's dark sheet and gold, Adapty's thank-you ============ */
+.giftpill{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px 0 12px;margin-left:auto;margin-right:10px;border-radius:999px;background:#110F0B;color:#F6E7B8;font:600 14px/1 'Instrument Sans',sans-serif;box-shadow:inset 0 0 0 1px rgba(237,195,91,.35);transition:transform .15s}
+.giftpill:hover{transform:translateY(-1px)}
+.giftpill .bx{width:20px;height:20px}
+.nav-in .nav-links{margin-left:0}
+@media(max-width:560px){.giftpill{height:38px;padding:0 11px;margin-right:6px}.giftpill .t{display:none}}
+.giftsec{padding:0 0 96px}
+.giftcard{position:relative;overflow:hidden;border-radius:32px;background:#110F0B;color:#FBF8F1;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:32px;align-items:center}
+@media(max-width:820px){.giftcard{grid-template-columns:1fr}}
+.giftcard::before{content:'';position:absolute;inset:0;background:radial-gradient(60% 80% at 85% 20%,rgba(237,195,91,.22),transparent 60%);pointer-events:none}
+.giftcard .eb{font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#EDC35B;margin-bottom:18px}
+.giftcard h2{font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:'opsz' 144;font-size:clamp(36px,5vw,60px);line-height:1;letter-spacing:-.02em;margin:0 0 18px}
+.giftcard h2 i{font-style:italic;color:#EDC35B}
+.giftcard p{font-size:17px;line-height:1.6;color:#CFCBC3;max-width:46ch;margin:0 0 26px}
+.goldbtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 28px;border-radius:16px;background:linear-gradient(180deg,#FEDA82 0%,#EDC35B 50%,#DEAB26 100%);color:#161300;font:700 16px/1 'Instrument Sans',sans-serif;box-shadow:inset 0 0 0 1.5px rgba(255,236,190,.55),0 14px 30px -14px rgba(222,171,38,.7);transition:transform .15s,filter .15s}
+.goldbtn:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.goldbtn[disabled]{background:#3A372F;color:#8E8A80;box-shadow:none;cursor:not-allowed;transform:none}
+/* a wrapped present, drawn in CSS, with the happn loop on the tag */
+.present{position:relative;width:min(260px,70%);aspect-ratio:1/1;justify-self:center;animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-1.5deg)}}
+.present .lid{position:absolute;left:4%;right:4%;top:22%;height:18%;border-radius:12px;background:#1E1B15;box-shadow:inset 0 0 0 1.5px rgba(237,195,91,.25)}
+.present .box{position:absolute;left:10%;right:10%;top:38%;bottom:4%;border-radius:10px 10px 16px 16px;background:linear-gradient(180deg,#191713,#110F0B);box-shadow:inset 0 0 0 1.5px rgba(237,195,91,.18),0 30px 50px -20px rgba(0,0,0,.6)}
+.present .rv{position:absolute;left:45%;width:10%;top:22%;bottom:4%;background:linear-gradient(90deg,#DEAB26,#FEDA82 45%,#DEAB26)}
+.present .rh{position:absolute;left:10%;right:10%;top:56%;height:9%;background:linear-gradient(180deg,#FEDA82,#DEAB26)}
+.present .bow{position:absolute;left:50%;top:22%;width:0;height:0}
+.present .bow i{position:absolute;width:56px;height:38px;border:7px solid #EDC35B;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;top:-36px}
+.present .bow i:first-child{right:2px;transform:rotate(-18deg)}.present .bow i:last-child{left:2px;transform:rotate(18deg)}
+.present .tag{position:absolute;right:-2%;top:46%;width:30%;aspect-ratio:1/1.15;border-radius:10px;background:#FBF8F1;transform:rotate(9deg);display:grid;place-items:center;box-shadow:0 10px 20px -10px rgba(0,0,0,.6)}
+.present .tag img{width:56%}
+@media (prefers-reduced-motion: reduce){.present{animation:none}}
+/* banner above the phone, where a scanned QR lands */
+.giftban{width:412px;max-width:100%;display:flex;align-items:center;gap:14px;padding:12px 12px 12px 14px;border-radius:20px;background:#110F0B;color:#FBF8F1;text-align:left;box-shadow:0 14px 30px -18px rgba(0,0,0,.6)}
+.giftban .mini{flex:none;width:44px;height:44px;border-radius:12px;background:linear-gradient(180deg,#FEDA82,#DEAB26);display:grid;place-items:center}
+.giftban .mini svg{width:24px;height:24px}
+.giftban b{display:block;font:700 15px/1.25 'Instrument Sans',sans-serif}
+.giftban span{display:block;font-size:12.5px;line-height:1.35;color:#B9B5AC;margin-top:2px}
+.giftban .go{margin-left:auto;flex:none;height:38px;padding:0 14px;border-radius:12px;background:#EDC35B;color:#161300;font:700 13.5px/38px 'Instrument Sans',sans-serif}
+/* the form sheet */
+.gsheet{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px}
+.gsheet[hidden]{display:none}
+.gscrim{position:absolute;inset:0;background:rgba(17,15,11,.62);backdrop-filter:blur(6px);animation:fade .25s ease}
+@keyframes fade{from{opacity:0}}
+.gpanel{position:relative;width:min(560px,100%);max-height:calc(100svh - 40px);overflow:auto;border-radius:28px;background:#FBF8F1;color:#10100A;box-shadow:0 40px 100px -30px rgba(0,0,0,.6);animation:rise .38s cubic-bezier(.32,.72,0,1)}
+@keyframes rise{from{transform:translateY(40px);opacity:0}}
+.ghead{position:relative;overflow:hidden;background:#110F0B;color:#FBF8F1;padding:30px 30px 26px}
+.ghead::after{content:'';position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,#DEAB26,#FEDA82,#DEAB26)}
+.ghead .rib{position:absolute;right:66px;top:0;bottom:0;width:22px;background:linear-gradient(90deg,#DEAB26,#FEDA82 45%,#DEAB26);opacity:.9}
+.ghead .eb{font:600 11.5px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#EDC35B}
+.ghead h3{font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:'opsz' 144;font-size:clamp(30px,6vw,40px);line-height:1.02;letter-spacing:-.02em;margin:12px 100px 10px 0}
+.ghead h3 i{font-style:italic;color:#EDC35B}
+.ghead p{margin:0 100px 0 0;font-size:15px;line-height:1.5;color:#CFCBC3}
+.gx{position:absolute;right:12px;top:12px;z-index:2;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;color:#FBF8F1}
+.gform{padding:24px 30px 28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gform .full{grid-column:1/-1}
+.gf label{display:block;font:600 12px/1 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#55534D;margin:0 0 7px}
+.gf label em{font-style:normal;text-transform:none;letter-spacing:0;color:#9A968C;font-weight:500}
+.gf input{width:100%;height:52px;border-radius:14px;border:1.5px solid #E3DED3;background:#fff;padding:0 15px;font:500 16px/1 'Instrument Sans',sans-serif;color:#10100A;outline:0;transition:border-color .15s,box-shadow .15s}
+.gf input:focus{border-color:#10100A;box-shadow:0 0 0 4px rgba(237,195,91,.35)}
+.gf input.bad{border-color:#D9582C}
+.gconsent{grid-column:1/-1;display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:16px;background:#F1EDE5;cursor:pointer;margin-top:4px;transition:background .15s,box-shadow .15s}
+.gconsent input{position:absolute;opacity:0;pointer-events:none}
+.gconsent .ck{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid #10100A;background:#fff;display:grid;place-items:center;transition:background .15s}
+.gconsent .ck svg{width:14px;height:14px;opacity:0;transform:scale(.6);transition:opacity .15s,transform .15s}
+.gconsent input:checked+.ck{background:linear-gradient(180deg,#FEDA82,#DEAB26);border-color:#DEAB26}
+.gconsent input:checked+.ck svg{opacity:1;transform:none}
+.gconsent input:focus-visible+.ck{box-shadow:0 0 0 4px rgba(237,195,91,.45)}
+.gconsent b{display:block;font:600 15px/1.35 'Instrument Sans',sans-serif}
+.gconsent span.s{display:block;font-size:13px;line-height:1.45;color:#6A675F;margin-top:4px}
+.gconsent.bad{box-shadow:0 0 0 2px #D9582C}
+.gsubmit{grid-column:1/-1;display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.gsubmit .goldbtn{width:100%}
+.gnote{font-size:12.5px;line-height:1.45;color:#8A867C;text-align:center}
+.gerr{grid-column:1/-1;display:none;font-size:13.5px;color:#B6411A;background:#FCE9E1;border-radius:12px;padding:10px 12px}
+.gerr.on{display:block}
+.ghp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.gdone{padding:40px 30px 36px;text-align:center;display:none}
+.gdone.on{display:block}
+.gdone .present{width:150px;margin:0 auto 20px;animation:pop .6s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.4) rotate(-12deg);opacity:0}}
+.gdone h3{font-family:Fraunces,Georgia,serif;font-weight:900;font-variation-settings:'opsz' 144;font-size:34px;line-height:1.05;letter-spacing:-.02em;margin:0 0 10px}
+.gdone h3 i{font-style:italic}
+.gdone p{font-size:15.5px;line-height:1.55;color:#55534D;margin:0 auto 22px;max-width:38ch}
+.gdone .goldbtn{min-width:200px}
+.spin{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(22,19,0,.25);border-top-color:#161300;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media(max-width:560px){
+  .gsheet{padding:0;place-items:end stretch}
+  .gpanel{width:100%;max-height:94svh;border-radius:26px 26px 0 0}
+  .gform{grid-template-columns:1fr;padding:20px 20px 24px}
+  .ghead{padding:26px 20px 22px}.ghead .rib{right:60px;width:16px}
+}
+@media(max-width:500px){.giftban{order:0;width:auto;margin:0 12px}}
 </style>
 </head>
 <body>
-<div class="nav"><div class="nav-in"><img src="img/logo.svg" alt="happn"><span class="lb">Paywall audit</span><div class="nav-links"><button class="on" data-view="over"><span class="n">1</span>Overview</button><button data-view="pw"><span class="n">2</span>Paywall</button></div></div></div>
+<div class="nav"><div class="nav-in"><img src="img/logo.svg" alt="happn"><span class="lb">Paywall audit</span><button class="giftpill" data-gift><svg class="bx" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7M12 8.5v12M12 8.5S10.5 4 8.2 4.5C6 5 7 8.5 12 8.5ZM12 8.5S13.5 4 15.8 4.5C18 5 17 8.5 12 8.5Z"/></svg><span class="t">A gift for you</span></button><div class="nav-links"><button class="on" data-view="over"><span class="n">1</span>Overview</button><button data-view="pw"><span class="n">2</span>Paywall</button></div></div></div>
 
 <!-- ======================= OVERVIEW ======================= -->
 <div class="view on" id="view-over">
@@ -437,6 +530,15 @@ b .sym,.idea .out b .sym,.band .nums b .sym,.chg .imp b .sym{display:inline!impo
     <div class="qr"><img src="img/qr.svg" alt="QR code to the paywall"><div><b>Open it on your phone</b><span>Scan to try the paywall in your hand.</span></div></div>
   </div>
 </div></div>
+<div class="giftsec"><div class="wrap"><div class="giftcard">
+  <div style="position:relative">
+    <div class="eb">From Adapty, with thanks</div>
+    <h2>A little g<i>i</i>ft,<br>from us to you.</h2>
+    <p>Thank you for spending the evening with us. We’d love to send you something to remember it by. Tell us where, and we’ll take care of the rest.</p>
+    <button class="goldbtn" data-gift>Tell us where to send it <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
+  <div class="present" aria-hidden="true"><div class="lid"></div><div class="box"></div><div class="rv"></div><div class="rh"></div><div class="bow"><i></i><i></i></div><div class="tag"><img src="img/mark.svg" alt=""></div></div>
+</div></div></div>
 <div class="foot"><div class="wrap">Impact ranges are Adapty’s expected effect from teardowns and A/B tests across subscription apps — not measured lift for happn. Every price, plan, benefit, testimonial and line of copy here comes from happn’s own in-app screens, happn.com and its App Store listing; the 56% and 50% savings and the 6,66 € difference are computed from your own prices.</div></div>
 </div><!-- /view-over -->
 
@@ -444,6 +546,7 @@ b .sym,.idea .out b .sym,.band .nums b .sym,.chg .imp b .sym{display:inline!impo
 <div class="view" id="view-pw">
 <div class="stage">
   <div class="phonecol" id="phonecol">
+    <button class="giftban" data-gift><span class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="#161300" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7M12 8.5v12M12 8.5S10.5 4 8.2 4.5C6 5 7 8.5 12 8.5ZM12 8.5S13.5 4 15.8 4.5C18 5 17 8.5 12 8.5Z"/></svg></span><span><b>We have a gift for you</b><span>Tell us where to send it. Takes a minute.</span></span><span class="go">Claim</span></button>
     <div class="backbar"><button class="backbtn" data-view="over"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Overview</button><span class="where">Our Plans, right after onboarding</span></div>
     <div class="tools">
       <div class="seg" id="segLang"><button data-l="en" class="on">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button></div>
@@ -550,6 +653,36 @@ b .sym,.idea .out b .sym,.band .nums b .sym,.chg .imp b .sym{display:inline!impo
   </div></aside>
 </div>
 </div><!-- /view-pw -->
+<div class="gsheet" id="gsheet" hidden role="dialog" aria-modal="true" aria-labelledby="g-title">
+  <div class="gscrim" data-gclose></div>
+  <div class="gpanel">
+    <button class="gx" data-gclose aria-label="Close"><svg width="12" height="12" viewBox="0 0 14 14"><path d="M2 2l10 10M12 2 2 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+    <div class="ghead"><span class="rib" aria-hidden="true"></span>
+      <div class="eb">From Adapty, with thanks</div>
+      <h3 id="g-title">Where should we send your g<i>i</i>ft?</h3>
+      <p>A small thank-you for the evening. Your details go straight to our team and are used only to ship it.</p>
+    </div>
+    <form class="gform" id="gform" novalidate>
+      <div class="gf full"><label for="g-name">Full name</label><input id="g-name" name="Full name" autocomplete="name" placeholder="First and last name" required></div>
+      <div class="gf full"><label for="g-addr1">Street address</label><input id="g-addr1" name="Street address" autocomplete="address-line1" placeholder="Street and number" required></div>
+      <div class="gf full"><label for="g-addr2">Apartment, floor, building <em>(optional)</em></label><input id="g-addr2" name="Apartment / floor" autocomplete="address-line2" placeholder="Apt 4, 2nd floor, door code…"></div>
+      <div class="gf"><label for="g-city">City</label><input id="g-city" name="City" autocomplete="address-level2" required></div>
+      <div class="gf"><label for="g-zip">Postal code</label><input id="g-zip" name="Postal code" autocomplete="postal-code" required></div>
+      <div class="gf full"><label for="g-country">Country</label><input id="g-country" name="Country" autocomplete="country-name" list="g-countries" required></div>
+      <datalist id="g-countries"><option>France</option><option>Spain</option><option>Germany</option><option>Italy</option><option>United Kingdom</option><option>Netherlands</option><option>Belgium</option><option>Switzerland</option><option>Portugal</option><option>Poland</option><option>United States</option><option>Cyprus</option></datalist>
+      <label class="gconsent" id="g-consent-box" for="g-consent"><input type="checkbox" id="g-consent" name="Consent"><span class="ck"><svg viewBox="0 0 14 14" fill="none" stroke="#161300" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7.5l3 3 6-7"/></svg></span><span><b>Yes, I’d be happy to receive a physical gift from Adapty at this address.</b><span class="s">We’ll use these details only to send this gift. No mailing lists, no marketing.</span></span></label>
+      <input class="ghp" type="text" name="_honey" id="g-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="gerr" id="g-err" role="alert"></div>
+      <div class="gsubmit"><button class="goldbtn" type="submit" id="g-send">Send me the gift</button><div class="gnote">Goes straight to the Adapty team by email. Nothing is kept on this page.</div></div>
+    </form>
+    <div class="gdone" id="g-done">
+      <div class="present" aria-hidden="true"><div class="lid"></div><div class="box"></div><div class="rv"></div><div class="rh"></div><div class="bow"><i></i><i></i></div><div class="tag"><img src="img/mark.svg" alt=""></div></div>
+      <h3 id="g-done-h">It’s on its way, soon.</h3>
+      <p>Thank you. We’ve got your address and we’ll be in touch if the courier needs anything.</p>
+      <button class="goldbtn" data-gclose>Back to the prototype</button>
+    </div>
+  </div>
+</div>
 <div class="finger" id="finger"></div>
 
 <script>
@@ -815,6 +948,37 @@ render();
 window.addEventListener('load',placeMarks);
 if(document.fonts) document.fonts.ready.then(placeMarks);
 if(/[?&]open=(proto|pw)/.test(location.search)) showView('pw');
+
+/* ---- the gift form: sent by email to the Adapty team through FormSubmit ---- */
+var GIFT_TO='https://formsubmit.co/ajax/plykhvar@adapty.io';
+var gLast=null;
+function giftOpen(){ gLast=document.activeElement; var g=$('#gsheet'); g.hidden=false; document.body.style.overflow='hidden'; setTimeout(function(){ var f=$('#g-name'); if(f&&!$('#g-done').classList.contains('on')) f.focus(); },60); try{ stopDemo(); }catch(e){} }
+function giftClose(){ $('#gsheet').hidden=true; document.body.style.overflow=''; if(gLast&&gLast.focus) gLast.focus(); }
+$$('[data-gift]').forEach(function(b){ b.addEventListener('click',giftOpen); });
+$$('[data-gclose]').forEach(function(b){ b.addEventListener('click',giftClose); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!$('#gsheet').hidden) giftClose(); });
+$$('#gform input').forEach(function(i){ i.addEventListener('input',function(){ i.classList.remove('bad'); $('#g-err').classList.remove('on'); }); });
+$('#g-consent').addEventListener('change',function(){ $('#g-consent-box').classList.remove('bad'); $('#g-err').classList.remove('on'); });
+$('#gform').addEventListener('submit',function(e){
+  e.preventDefault();
+  var req=['g-name','g-addr1','g-city','g-zip','g-country'], firstBad=null;
+  req.forEach(function(id){ var el=$('#'+id); var ok=el.value.trim().length>1; el.classList.toggle('bad',!ok); if(!ok&&!firstBad) firstBad=el; });
+  var name=$('#g-name').value.trim(); if(name&&name.split(/\s+/).length<2){ $('#g-name').classList.add('bad'); firstBad=firstBad||$('#g-name'); }
+  var consent=$('#g-consent').checked; $('#g-consent-box').classList.toggle('bad',!consent);
+  if(firstBad||!consent){ var er=$('#g-err'); er.textContent=firstBad?(firstBad.id==='g-name'&&name?'Please add your first and last name.':'Please fill in the highlighted fields.'):'Please tick the box so we know you’re happy to receive a gift.'; er.classList.add('on'); (firstBad||$('#g-consent')).focus(); return; }
+  if($('#g-honey').value) return;
+  var btn=$('#g-send'); btn.disabled=true; btn.innerHTML='<span class="spin"></span>Sending…';
+  var data={ 'Full name':name, 'Street address':$('#g-addr1').value.trim(), 'Apartment / floor':$('#g-addr2').value.trim()||'—', 'City':$('#g-city').value.trim(), 'Postal code':$('#g-zip').value.trim(), 'Country':$('#g-country').value.trim(),
+    'Consent to receive a physical gift':'Yes', 'From prototype':'happn', 'Submitted':new Date().toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'}),
+    _subject:'🎁 Gift address: '+name+' (happn)', _template:'table', _captcha:'false' };
+  fetch(GIFT_TO,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+    .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {ok:r.ok,j:j}; }); })
+    .then(function(res){ if(res.ok&&String(res.j.success)==='true'){ $('#gform').style.display='none'; $('#g-done-h').innerHTML='Thank you, '+name.split(/\s+/)[0].replace(/[<>&]/g,'')+'. It’s on its <i>w</i>ay soon.'; $('#g-done').classList.add('on'); try{ $$('[data-gift]').forEach(function(b){ if(b.classList.contains('giftban')) b.querySelector('.go').textContent='Sent ✓'; }); }catch(e){} }
+      else throw new Error((res.j&&res.j.message)||'send failed'); })
+    .catch(function(){ var er=$('#g-err'); er.textContent='We couldn’t send this just now. Please check your connection and try again.'; er.classList.add('on'); })
+    .then(function(){ btn.disabled=false; btn.textContent='Send me the gift'; });
+});
+if(/[?&]gift\b/.test(location.search)) giftOpen();
 </script>
 </body>
 </html>
